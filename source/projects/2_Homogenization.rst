@@ -17,7 +17,7 @@ with periodic features, such as composites, foams, and lattice structures. The s
 predictions of the macroscopic behavior of these materials based on their microstructural properties.
 The implemented algorithm is an improvement over existing methods, based on my research, further enhancing the
 capabilities of homogenization techniques in structural analysis. The solution is in use in the structural analysis
-and design software `AxisVM <https://axisvm.eu/>`. As of my knowledge, this is the first implementation of such an
+and design software `AxisVM <https://axisvm.eu/>`_. As of my knowledge, this is the first implementation of such an
 algorithm in a commercial software package for civil engineering design purposes.
 
 .. figure:: ../_static/homogenization_1.png

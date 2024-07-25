@@ -1,6 +1,6 @@
-===========================================================================================
-Research and Implementation of a Design Module for Multi-Layered Composite Shells in AxisVM
-===========================================================================================
+==========================================================================================================
+Research and Software Implementation of a Novel Design Module for Multi-Layered Composite Shells in AxisVM
+==========================================================================================================
 
 Keywords
 ========
@@ -10,7 +10,15 @@ Delphi, Finite Element Analysis, Composite Mechanics, Research, Software Develop
 Overview
 ========
 
-During my time at `AxisVM <https://axisvm.eu/>`, one of my duties was to create a design module capable of handling XLAM plates, 
+.. sidebar:: **Bence Balogh**
+   
+   .. figure:: ../_static/xlam.png
+      :align: center
+      :height: 200
+
+      An XLAM plate with multiple layers.
+
+During my time at `AxisVM <https://axisvm.eu/>`_, one of my duties was to create a design module capable of handling XLAM plates, 
 which are multi-layered timber plates. The task was very challenging since Eurocode (the collection of standards 
 related to the design of civil engineering structures) was completely silent on the matter. It had chapters for 
 timber beams, but it doesn’t follow from that. It was my task to figure out the metrics to be used and to do all 
@@ -19,48 +27,45 @@ would trust my metrics and they would rely on the product to design actual struc
 up with an implementation, which was an industry-leading solution at the time. It was not a copy of existing solutions, 
 but an original approach to the problem.
 
-.. figure:: ../_static/homogenization_1.png
+.. figure:: ../_static/xlam_stresses.png
    :align: center
    
-   Illustration of the homogenization process for a ribbed plate.
+   The visualization I created for the stress distribution.
    
    
 Features
 ========
 
-- **Automatic calculation of equivalent model stiffness matrices:** The algorithm is capable to determining
-  equivalent stiffness matrices of partcically any kind of shell with a periodic microstructure. A key feature of the
-  solution is the ability to handle the most complex of geometries and material properties. It uses a 3d RVE and
-  determines the stiffness matrix for a 2d model using a retrofitting approach, which is an original contribution.
+- **Calculation of equivalent model stiffness matrices for arbitrary multi-layered shells:** The implemented
+  solution is capable of calculating the stiffness matrix of any kind of multi-layered shell, including, but not 
+  limited to XLAM plates. The calculation also includes the determination of shear correction factors for 
+  Uflyand-Mindlin plates.
+- **Graphical visualization of stress distribution:** The software provides a graphical representation of the stress
+  distribution in the plate, allowing engineers to visualize the load paths and stress concentrations.
 
 Technologies Used
 =================
 
 - **Delphi:** Core programming language for developing the algorithms used in AxisVM.
-- **Finite Element Analysis:** Utilized for the numerical solution of the homogenization equations.
-- **Optimization Techniques:** Implemented to improve the efficiency and accuracy of the calculations.
-- **Frontal Method Solver:** Developed for solving the linear systems of equations arising from the homogenization process.
-- **Graph Theory-Based Optimization:** Used to minimize the bandwidth of the coefficient matrix for improved computational efficiency,
-  falling in the category of combinatorial optimization.
+- **ANSYS APDL:** I used ANSYS to validate my results. I created a model in ANSYS and compared the results with my own implementation.
+- **LaTeX:** Used for the documentation of the design module.
 
 Challenges and Solutions
 ========================
 
-- **Standalone Implementation:** Using legacy code was not an option due to technical difficulties. Therefore, the 
-  implementation comes with it's own finite elements, equation solver, pre- and postprocessing
-  tools, etc. This also involves the implementation of a direct equation solver (frontal method), accompanied by an 
-  optimizer that renumbers the elements such that the coefficient matrix has minimal bandwidth. Here I implemented King's 
-  method.
-- **Mathematical Complexity:** The theory behind the solution is based on advanced mathematical concepts, such as 
-  two-scale asymptotic expansion, differential equations and retrofitting. Implementing these concepts in a practical software 
-  tool required a deep understanding of both the theoretical and computational aspects. I had to develop a robust algorithm that 
-  could handle the complexity of the calculations while maintaining efficiency and accuracy. This involved extensive testing and 
-  validation to ensure the correctness of the results.
+- **Absence of existing solutions:** When I was given the task, Eurocode was completely silent on the matter of timber plates; the existing solutions
+  were based on beam solutions. I had to do my own research and come up with a solution that was compliant
+  with the existing standards, but also provided a reliable and accurate solution for the design of timber plates. This required a deep
+  understanding of composite mechanics, finite element analysis, and software development. The final solution is based on shell theory
+  insted of beam theory, which was a novel approach at the time.
+- **Huge responsibility:** I knew that when the product was going to be launched into production, engineers all around Europe would rely
+  on it and trust the tools we provide for them. This was a huge responsibility, and I had to make sure that the solution was accurate,
+  which in the absence of standards or experiments, was a challenging task. I had to validate my results using analytical solutions and ANSYS.
 
 Conclusion
 ==========
 
-The project showcases my abilities in theoretical research, algorithm development, and software implementation and problem 
-solving in general. It is one thing to read a book and implement the algorithms described in it, but it is a completely different 
-challenge to take an existing theory and improve it, makeing it more suitable to a given problem. This requires a deep understanding
-of the underlying principles, as well as creativity and problem-solving skills.
+Overall, this project highlights my capacity for original research, creative problem-solving, and the practical application of complex engineering principles.
+It shows that I'm able to take and critically investigate existing approaches to a problem and improve upon them when necessary.
+It exemplifies my dedication to developing reliable, accurate, and user-friendly tools that advance the field of structural analysis and design, while 
+performing exceptionally well under significant responsibility and pressure.
