@@ -33,10 +33,12 @@ html_css_files = [
 # -- Options for the used Sphinx theme ----------------------------------------
 # https://pradyunsg.me/furo/
 
-html_theme = "furo"
+html_theme = "pydata_sphinx_theme"
 html_theme_options = {
-    "sidebar_hide_name": True,
-    "top_of_page_buttons": [],
+    "use_edit_page_button": False,
+    "logo": {
+        "text": "Home",
+    }
 }
 
 
