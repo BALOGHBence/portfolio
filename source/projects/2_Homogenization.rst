@@ -61,7 +61,7 @@ Challenges and Solutions
 Conclusion
 ==========
 
-The project showcases my abilities in theoretical research, algorithm development, and software implementation and problem 
+The project showcases my abilities in theoretical research, algorithm development, software implementation and problem 
 solving in general. It is one thing to read a book and implement the algorithms described in it, but it is a completely different 
 challenge to take an existing theory and improve it, makeing it more suitable to a given problem. This requires a deep understanding
 of the underlying principles, as well as creativity and problem-solving skills.
