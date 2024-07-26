@@ -28,3 +28,18 @@ the most important ones being
 - `sigmaepsilon.mesh <https://pypi.org/project/sigmaepsilon.mesh/>`_: This library is about managing, manipulating, and storing 
   data related to meshes. It is a key component for my finite element library as it provides the base classes 
   (geometrical discretization) for most of the isoparametric finite elements.
+- `sigmaepsilon.solid.material <https://pypi.org/project/sigmaepsilon.solid.material/>`_: This library is about managing 
+  material data. It includes solutions for the calculation of material properties, stress-strain relations, and 
+  constitutive models. It is a key component for my finite element library as it provides the material models for 
+  the elements.
+- `sigmaepsilon.solid.fourier <https://pypi.org/project/sigmaepsilon.solid.fourier/>`_: This library is about semi-analytical
+  solutions for simple plate problems. It is great for educational purposes, idea validation and verification of solutions
+  coming from fully numerical soliutions, like the finite element method.
+
+All the libraries listed here are professional Python packages, with documentation, tests, and continuous integration,
+build along sommmunity standards. They are also available on the Python Package Index (PyPI) and can be installed using
+pip. The source code is available on GitHub, and the documentation is hosted on Read the Docs.
+
+These libraries are key in my development as a Python programmer, this is where I learned the most. Here, I can go down 
+the rabbit hole as far as I wish without any limitations. I can implement the most advanced algorithms, I can experiment
+with new ideas, and I can learn from my mistakes. This is where I can practice my creativity.

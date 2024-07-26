@@ -1,3 +1,5 @@
+.. _Research and Software Implementation of a Novel Design Module for Multi-Layered Composite Shells in AxisVM:
+
 ==========================================================================================================
 Research and Software Implementation of a Novel Design Module for Multi-Layered Composite Shells in AxisVM
 ==========================================================================================================
@@ -10,7 +12,7 @@ Delphi, Finite Element Analysis, Composite Mechanics, Research, Software Develop
 Overview
 ========
 
-.. sidebar:: **Bence Balogh**
+.. sidebar::
    
    .. figure:: ../_static/xlam.png
       :align: center
@@ -31,6 +33,22 @@ but an original approach to the problem.
    :align: center
    
    The visualization I created for the stress distribution.
+
+
+.. raw:: html
+
+    <style>
+        .centralized {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <p class="centralized">
+        <a href="_static/axisvm_xlam_guide_en.pdf" target="_blank">
+            <button class="fancy-download-button">Cliek here to see the full documentation of the module.</button>
+        </a>
+    </p>
    
    
 Features
@@ -48,7 +66,7 @@ Technologies Used
 
 - **Delphi:** Core programming language for developing the algorithms used in AxisVM.
 - **ANSYS APDL:** I used ANSYS to validate my results. I created a model in ANSYS and compared the results with my own implementation.
-- **LaTeX:** Used for the documentation of the design module.
+- **LaTeX:** Used for the documentation of the design module (click on the button above to see it).
 
 Challenges and Solutions
 ========================
