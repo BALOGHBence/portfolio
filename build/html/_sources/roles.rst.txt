@@ -96,7 +96,7 @@ Me as a Researcher
 
 Most of my projects on this site involved some kind of research, where I had to develop a custom solution 
 for a complex engineering problem. I have experience with both theoretical and practical research, and I 
-have a strong background in solid mechanics and mathematics. Exemple projects:
+have a strong background in solid mechanics, mathematics. Exemple projects:
 
 * :ref:`Theoretical Development and Software Implementation of an Asymptotic Homogenization Method in Delphi`
 
@@ -118,9 +118,6 @@ As a PhD student, I was responsible for teaching the following subjects:
 * Nonlinear Mechanics (MSc) in English. This is actually a PhD level course.
 
 Besides teachning, I crated high quality lecture notes, homeworks, exams and solutions for the above subjects.
-
-Since I've left the university, I take students on a private basis, one at a time, teaching various subjects in 
-both structural and mechanical engineering.
 
 Me as a Technical Writer
 ========================

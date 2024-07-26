@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. Research and Software Implementation of a Novel Design Module for Multi-Layered Composite Shells in AxisVM &#8212; Portfolio 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=1a1ee81d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'projects/3_XLAM_AxisVM';</script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Structural Design of a Catamaran Using a Self-Developed Finite Element Software" href="4_Catamaran.html" />
+    <link rel="prev" title="1. Theoretical Development and Software Implementation of an Asymptotic Homogenization Method in Delphi" href="2_Homogenization.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Home</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../roles.html">
+    Roles
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../studies.html">
+    Studies
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../research.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../contact.html">
+    Contact
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../roles.html">
+    Roles
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../studies.html">
+    Studies
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../research.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../contact.html">
+    Contact
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../projects.html" class="nav-link">Projects</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="research-and-software-implementation-of-a-novel-design-module-for-multi-layered-composite-shells-in-axisvm">
+<span id="id1"></span><h1><span class="section-number">2. </span>Research and Software Implementation of a Novel Design Module for Multi-Layered Composite Shells in AxisVM<a class="headerlink" href="#research-and-software-implementation-of-a-novel-design-module-for-multi-layered-composite-shells-in-axisvm" title="Link to this heading">#</a></h1>
+<section id="keywords">
+<h2><span class="section-number">2.1. </span>Keywords<a class="headerlink" href="#keywords" title="Link to this heading">#</a></h2>
+<p>Delphi, Finite Element Analysis, Composite Mechanics, Research, Software Development, Structural Analysis</p>
+</section>
+<section id="overview">
+<h2><span class="section-number">2.2. </span>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<aside class="sidebar">
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/xlam.png"><img alt="../_images/xlam.png" src="../_images/xlam.png" style="height: 200px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">An XLAM plate with multiple layers.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</aside>
+<p>During my time at <a class="reference external" href="https://axisvm.eu/">AxisVM</a>, one of my duties was to create a design module capable of handling XLAM plates,
+which are multi-layered timber plates. The task was very challenging since Eurocode (the collection of standards
+related to the design of civil engineering structures) was completely silent on the matter. It had chapters for
+timber beams, but it doesn’t follow from that. It was my task to figure out the metrics to be used and to do all
+software development from calculation to UI design. The responsibility was enormous because I knew that end users
+would trust my metrics and they would rely on the product to design actual structures. I did my research and I came
+up with an implementation, which was an industry-leading solution at the time. It was not a copy of existing solutions,
+but an original approach to the problem.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/xlam_stresses.png" src="../_images/xlam_stresses.png" />
+<figcaption>
+<p><span class="caption-text">The visualization I created for the stress distribution.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<style>
+    .centralized {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<p class="centralized">
+    <a href="_static/axisvm_xlam_guide_en.pdf" target="_blank">
+        <button class="fancy-download-button">Cliek here to see the full documentation of the module.</button>
+    </a>
+</p></section>
+<section id="features">
+<h2><span class="section-number">2.3. </span>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Calculation of equivalent model stiffness matrices for arbitrary multi-layered shells:</strong> The implemented
+solution is capable of calculating the stiffness matrix of any kind of multi-layered shell, including, but not
+limited to XLAM plates. The calculation also includes the determination of shear correction factors for
+Uflyand-Mindlin plates.</p></li>
+<li><p><strong>Graphical visualization of stress distribution:</strong> The software provides a graphical representation of the stress
+distribution in the plate, allowing engineers to visualize the load paths and stress concentrations.</p></li>
+</ul>
+</section>
+<section id="technologies-used">
+<h2><span class="section-number">2.4. </span>Technologies Used<a class="headerlink" href="#technologies-used" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Delphi:</strong> Core programming language for developing the algorithms used in AxisVM.</p></li>
+<li><p><strong>ANSYS APDL:</strong> I used ANSYS to validate my results. I created a model in ANSYS and compared the results with my own implementation.</p></li>
+<li><p><strong>LaTeX:</strong> Used for the documentation of the design module (click on the button above to see it).</p></li>
+</ul>
+</section>
+<section id="challenges-and-solutions">
+<h2><span class="section-number">2.5. </span>Challenges and Solutions<a class="headerlink" href="#challenges-and-solutions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Absence of existing solutions:</strong> When I was given the task, Eurocode was completely silent on the matter of timber plates; the existing solutions
+were based on beam solutions. I had to do my own research and come up with a solution that was compliant
+with the existing standards, but also provided a reliable and accurate solution for the design of timber plates. This required a deep
+understanding of composite mechanics, finite element analysis, and software development. The final solution is based on shell theory
+insted of beam theory, which was a novel approach at the time.</p></li>
+<li><p><strong>Huge responsibility:</strong> I knew that when the product was going to be launched into production, engineers all around Europe would rely
+on it and trust the tools we provide for them. This was a huge responsibility, and I had to make sure that the solution was accurate,
+which in the absence of standards or experiments, was a challenging task. I had to validate my results using analytical solutions and ANSYS.</p></li>
+</ul>
+</section>
+<section id="conclusion">
+<h2><span class="section-number">2.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Overall, this project highlights my capacity for original research, creative problem-solving, and the practical application of complex engineering principles.
+It shows that I’m able to take and critically investigate existing approaches to a problem and improve upon them when necessary.
+It exemplifies my dedication to developing reliable, accurate, and user-friendly tools that advance the field of structural analysis and design, while
+performing exceptionally well under significant responsibility and pressure.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2_Homogenization.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Theoretical Development and Software Implementation of an Asymptotic Homogenization Method in Delphi</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="4_Catamaran.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Structural Design of a Catamaran Using a Self-Developed Finite Element Software</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords">2.1. Keywords</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">2.2. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">2.3. Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies-used">2.4. Technologies Used</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-and-solutions">2.5. Challenges and Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">2.6. Conclusion</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/projects/3_XLAM_AxisVM.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Bence Balogh.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

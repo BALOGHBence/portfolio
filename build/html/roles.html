@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Roles &#8212; Portfolio 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=1a1ee81d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'roles';</script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Studies" href="studies.html" />
+    <link rel="prev" title="5. Development of a High Performance Topology Optimization Library in Python" href="projects/6_topopt.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Home</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="about.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Roles
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="studies.html">
+    Studies
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="research.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contact.html">
+    Contact
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="about.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Roles
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="studies.html">
+    Studies
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="research.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contact.html">
+    Contact
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Roles</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="roles">
+<h1>Roles<a class="headerlink" href="#roles" title="Link to this heading">#</a></h1>
+<p>This section explains how I fit into the roles of a structural engineer, data scientist,
+software developer, optimization engineer or researcher.</p>
+<section id="me-as-a-structural-engineer">
+<h2>Me as a Structural Engineer<a class="headerlink" href="#me-as-a-structural-engineer" title="Link to this heading">#</a></h2>
+<p>This probably doesn’t require too much explanation. I’ve experience with concrete, steel, timber
+and composite structures, and I’ve worked on a wide range of projects, including bridges and buildings,
+and I’ve also took part in the development of a catamaran. I also posess excellent, PhD level theoretical
+understanding of structural mechanics, and the finite element method, for which I developed my own
+library in Python. I also have experience with professional software like AxisVM or ANSYS.</p>
+<p>Although I don’t have a tremendous amount of practical experience, I make up for it with my theoretical
+expertise and my ability to create custom software solutions for complex engineering problems. I’m known
+about being able to tackle the most complicated of problems and my clients usually approach me with tasks
+others struggle to solve.</p>
+<p>When should you hire me as a structural engineer? If you have a complex problem that requires a custom
+solution, out-of-box thinking I’m your guy. If you need a software solution for a problem that is not covered
+by existing software, I’m your guy. If you need a reliable, accurate and fast solution for a problem that is
+beyond the capabilities of existing software, I’m your guy.</p>
+</section>
+<section id="me-as-a-software-developer">
+<h2>Me as a Software Developer<a class="headerlink" href="#me-as-a-software-developer" title="Link to this heading">#</a></h2>
+<p>I have extensive experience in software development and have worked on a diverse array of projects. My portfolio includes
+applications for both desktop and web, developed using various programming languages and frameworks. While I have a
+strong background in Python, I also have experience in Fortran, Visual Basic, C#, C++, HTML, CSS, and Delphi. Additionally,
+I have experience with specialized languages such as ANSYS APDL, LaTeX, and MATLAB.</p>
+<p>Throughout my career, I have worked with a wide range of programming languages, from strongly typed, compiled languages
+with rigorous memory management like Delphi to high-level, dynamic, interpreted languages like Python. This broad experience
+enables me to identify and utilize the perfect set of tools for a given problem, ensuring optimal solutions. My ability to
+quickly learn and adapt to new languages and frameworks means that learning a new language for a project is no problem for me.
+Employers can be confident that even if I am not already familiar with a specific framework they are looking for, I can quickly
+get up to speed and deliver high-quality results.</p>
+<p>I have several years of experience in developing, managing, maintaining, documenting and deploying software applications.
+I’m the founder and maintainer of several professional Python packages, where I currently do all the development, testing,
+documentation and DevOps duties.</p>
+<p>Although in the past couple of years my attention shifted towards high level languages and web, I have several years of
+experience if developing industry level desktop applications with over 5 million lines of code.</p>
+<p>I’m familiar with OOP, design patterns, SOLID principles, algorithm design, software architecture, and version control sistems
+such as Git and SVN, and more.</p>
+</section>
+<section id="me-as-an-optimization-engineer">
+<h2>Me as an Optimization Engineer<a class="headerlink" href="#me-as-an-optimization-engineer" title="Link to this heading">#</a></h2>
+<p>I was introduced to the field of optimization during my PhD studies, where I focused on the optimal design of structures.
+This work required not only a solid understanding of solid mechanics but also a deep knowledge of optimization algorithms,
+both theoretical and practical. I have experience with gradient-based and gradient-free optimization algorithms, heuristic
+and path-following methods, and linear and nonlinear, as well as integer and real-valued optimization problems.</p>
+<p>During my PhD, I developed a custom optimization algorithm to solve the topology optimization problem, a highly nonlinear,
+mixed-integer optimization challenge with PDE constraints. This problem is beyond the capabilities of even advanced libraries
+like Gurobi or CPLEX, necessitating a deep understanding of the problem and the ability to create a custom solution. My algorithm
+for finding optimal topologies required a thorough comprehension of the problem’s unique properties, allowing me to craft
+domain-specific solutions that leverage these characteristics. I believe that this specialized knowledge is far more valuable
+than simply knowing how to use existing libraries.</p>
+<p>The algorithms I’ve implemented myself so far are:</p>
+<ul class="simple">
+<li><p>A graph theory-based optimization algorithm to minimize the bandwidth of the coefficient matrix in a finite element software.</p></li>
+<li><p>A genetic algorithm for general purpose nonlinear optimization.</p></li>
+<li><p>A solve for linear programming problems (LPP) of all kinds.</p></li>
+<li><p>A topology optimization algorithm using an Optimality Criteria Method (OC) using the SIMP approach for:</p>
+<ul>
+<li><p>Finding the optimal topology of general structures for minimum volume, subject to an upper bound
+constraint on the work of external forces, a PDE constraint expressing the equilibrium,
+and an upper bound constraint on the utilization of the structure.</p></li>
+<li><p>Finding the optimal topology of general structures for maximum stiffness, subject to an upper bound
+constraint on the volume, a PDE constraint expressing the equilibrium,
+and an upper bound constraint on the utilization of the structure.</p></li>
+</ul>
+</li>
+<li><p>A shape optimization algorithm to optimize various kinds of curved-folded structures using the
+Finite Strip Method (FSM) for minimum weight, subject to an upper bound constraint on the volume,
+a PDE constraint expressing the equilibrium of the strucrure.</p></li>
+</ul>
+</section>
+<section id="me-as-a-data-scientist">
+<h2>Me as a Data Scientist<a class="headerlink" href="#me-as-a-data-scientist" title="Link to this heading">#</a></h2>
+<p>[under construction]</p>
+</section>
+<section id="me-as-a-researcher">
+<h2>Me as a Researcher<a class="headerlink" href="#me-as-a-researcher" title="Link to this heading">#</a></h2>
+<p>Most of my projects on this site involved some kind of research, where I had to develop a custom solution
+for a complex engineering problem. I have experience with both theoretical and practical research, and I
+have a strong background in solid mechanics, mathematics. Exemple projects:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="projects/2_Homogenization.html#theoretical-development-and-software-implementation-of-an-asymptotic-homogenization-method-in-delphi"><span class="std std-ref">Theoretical Development and Software Implementation of an Asymptotic Homogenization Method in Delphi</span></a></p></li>
+<li><p><a class="reference internal" href="projects/3_XLAM_AxisVM.html#research-and-software-implementation-of-a-novel-design-module-for-multi-layered-composite-shells-in-axisvm"><span class="std std-ref">Research and Software Implementation of a Novel Design Module for Multi-Layered Composite Shells in AxisVM</span></a></p></li>
+</ul>
+<p>I also have experience in academic research, as I was a PhD student for 4 years, where I worked on some of the
+open challenges of structural topology optimization. This work required a deep understanding of the theoretical
+aspects of structural mechanics and applied mathematics, as well as the ability to develop a custom software
+implementation.</p>
+</section>
+<section id="me-as-an-educator">
+<h2>Me as an Educator<a class="headerlink" href="#me-as-an-educator" title="Link to this heading">#</a></h2>
+<p>I have tremendous amount of experience in education in teachning university and PhD level solid mechanics.
+As a PhD student, I was responsible for teaching the following subjects:</p>
+<ul class="simple">
+<li><p>Basics of Statics (BSc) and Dynamics in Hungarian.</p></li>
+<li><p>Strength of Materials (BSc) in Hungarian.</p></li>
+<li><p>Nonlinear Mechanics (MSc) in English. This is actually a PhD level course.</p></li>
+</ul>
+<p>Besides teachning, I crated high quality lecture notes, homeworks, exams and solutions for the above subjects.</p>
+</section>
+<section id="me-as-a-technical-writer">
+<h2>Me as a Technical Writer<a class="headerlink" href="#me-as-a-technical-writer" title="Link to this heading">#</a></h2>
+<p>I have experience in technical writing, as I have written several scientific papers, a PhD thesis, and
+I have created the documentation for several software packages. I have experience with LaTeX, Sphinx, and
+Markdown, MS Office, Google Docs and I have created documentation in all of these formats.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="projects/6_topopt.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Development of a High Performance Topology Optimization Library in Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="studies.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Studies</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#me-as-a-structural-engineer">Me as a Structural Engineer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#me-as-a-software-developer">Me as a Software Developer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#me-as-an-optimization-engineer">Me as an Optimization Engineer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#me-as-a-data-scientist">Me as a Data Scientist</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#me-as-a-researcher">Me as a Researcher</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#me-as-an-educator">Me as an Educator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#me-as-a-technical-writer">Me as a Technical Writer</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/roles.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Bence Balogh.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
