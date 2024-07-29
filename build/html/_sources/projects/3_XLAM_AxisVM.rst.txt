@@ -45,7 +45,7 @@ but an original approach to the problem.
     </style>
 
     <p class="centralized">
-        <a href="_static/axisvm_xlam_guide_en.pdf" target="_blank">
+        <a href="../_static/axisvm_xlam_guide_en.pdf" target="_blank">
             <button class="fancy-download-button">Cliek here to see the full documentation of the module.</button>
         </a>
     </p>
