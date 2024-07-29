@@ -1,3 +1,5 @@
+.. _About:
+
 =====
 About
 =====
@@ -38,3 +40,9 @@ I also wouldn't say I'm a physicist, a mathematician, a software developer, a ML
 either, but still, I'm a little bit all of these. This is why I'm writing this introduction, to give you a better understanding of 
 my background and my capabilities. I hope you will find this information useful, and I hope that you will find what you are 
 looking for in my portfolio. If you have any questions, feel free to contact me, I'm always happy to help.
+
+Education and Work Experience
+=============================
+
+If you want to know more about my educational background, or my work experience, please visit my LinkedIn profile by clicking
+`here <https://www.linkedin.com/in/bence-balogh-082073181/>`_.

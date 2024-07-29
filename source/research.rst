@@ -1,3 +1,5 @@
+.. _Research:
+
 ========
 Research
 ========
@@ -18,9 +20,8 @@ You can download my publication and citation summary (as of 2024.07.26) table by
 
 .. raw:: html
 
-    <p>
+    <p class="p-centralized">
         <a href="_static/pub_data.pdf" target="_blank">
-            <button class="fancy-download-button">Open PDF in a new window</button>
+            <button class="fancy-download-button">Open PDF in a new window.</button>
         </a>
     </p>
-    

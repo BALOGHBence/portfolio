@@ -37,16 +37,9 @@ but an original approach to the problem.
 
 .. raw:: html
 
-    <style>
-        .centralized {
-            display: flex;
-            justify-content: center;
-        }
-    </style>
-
-    <p class="centralized">
+    <p class="p-centralized">
         <a href="../_static/axisvm_xlam_guide_en.pdf" target="_blank">
-            <button class="fancy-download-button">Cliek here to see the full documentation of the module.</button>
+            <button class="fancy-download-button">Click here to see the full documentation of the module.</button>
         </a>
     </p>
    

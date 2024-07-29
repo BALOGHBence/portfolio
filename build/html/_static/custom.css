@@ -24,3 +24,8 @@
     background-color: #0056b3;
 }
 
+.p-centralized {
+    display: flex;
+    justify-content: center;
+}
+
