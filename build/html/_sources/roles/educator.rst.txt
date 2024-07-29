@@ -1,3 +1,6 @@
+.. _Me as an Educator:
+
+=================
 Me as an Educator
 =================
 
@@ -14,7 +17,7 @@ Since I've left the university, I take students on a private basis, one at a tim
 both structural and mechanical engineering.
 
 Check out a few from the lecture notes I've written by clicking on the buttons below. If you do so, consider that I wrote
-these at a time when I had a 300 EUR/month sarary as a PhD student (the amount has not changed since then).
+these at a time when I had a 300 EUR/month (no typo there) sarary as a PhD student (the amount has not changed since then).
 
 .. raw:: html
 

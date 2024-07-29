@@ -1,8 +1,8 @@
 .. _Home:
 
-===========================
-Welcome to my Portfolio! 👋
-===========================
+========================
+Welcome to my Portfolio!
+========================
 
 .. sidebar:: **Bence Balogh**
    

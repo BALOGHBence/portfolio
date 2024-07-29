@@ -17,3 +17,12 @@ When should you hire me as a structural engineer? If you have a complex problem 
 solution, out-of-box thinking I'm your guy. If you need a software solution for a problem that is not covered 
 by existing software, I'm your guy. If you need a reliable, accurate and fast solution for a problem that is
 beyond the capabilities of existing software, I'm your guy.
+
+Related projects
+================
+
+* :ref:`Theoretical Development and Software Implementation of an Asymptotic Homogenization Method in Delphi`
+
+* :ref:`Research and Software Implementation of a Novel Design Module for Multi-Layered Composite Shells in AxisVM`
+
+* :ref:`Structural Design of a Catamaran Using a Self-Developed Finite Element Software`

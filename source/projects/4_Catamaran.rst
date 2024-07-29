@@ -1,3 +1,5 @@
+.. _Structural Design of a Catamaran Using a Self-Developed Finite Element Software:
+
 ===============================================================================
 Structural Design of a Catamaran Using a Self-Developed Finite Element Software
 ===============================================================================

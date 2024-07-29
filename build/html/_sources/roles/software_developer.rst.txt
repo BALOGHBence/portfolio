@@ -23,3 +23,16 @@ experience if developing industry level desktop applications with over 5 million
 
 I'm familiar with OOP, design patterns, SOLID principles, algorithm design, software architecture, and version control sistems 
 such as Git and SVN, and more.
+
+Related projects
+================
+
+* :ref:`Theoretical Development and Software Implementation of an Asymptotic Homogenization Method in Delphi`
+
+* :ref:`Research and Software Implementation of a Novel Design Module for Multi-Layered Composite Shells in AxisVM`
+
+* :ref:`Structural Design of a Catamaran Using a Self-Developed Finite Element Software`
+
+* :ref:`Development of a Scientific Research Toolkit in Python Including a Finite Element and a Tensor Algebra Library`
+
+* :ref:`Development of a High Performance Topology Optimization Library in Python`

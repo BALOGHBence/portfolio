@@ -6,6 +6,9 @@ Research
 
 Welcome to the research section of my portfolio! 
 
+
+.. _Publications:
+
 Publications
 ============
 

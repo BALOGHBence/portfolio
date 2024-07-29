@@ -43,6 +43,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Me as a Data Scientist" href="data_scientist.html" />
+    <link rel="prev" title="Me as a Software Developer" href="software_developer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -146,7 +148,7 @@
 </li>
 
 
-<li class="nav-item ">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../roles.html">
     Roles
   </a>
@@ -242,8 +244,6 @@ document.write(`
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
@@ -273,7 +273,7 @@ document.write(`
 </li>
 
 
-<li class="nav-item ">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../roles.html">
     Roles
   </a>
@@ -358,6 +358,9 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
+    
+    <li class="breadcrumb-item"><a href="../roles.html" class="nav-link">Roles</a></li>
+    
     <li class="breadcrumb-item active" aria-current="page">Me as an...</li>
   </ul>
 </nav>
@@ -377,22 +380,40 @@ document.write(`
                   
   <section id="me-as-an-optimization-engineer">
 <h1>Me as an Optimization Engineer<a class="headerlink" href="#me-as-an-optimization-engineer" title="Link to this heading">#</a></h1>
-<p>I was introduced to the field of optimization during my PhD studies, where I focused on the optimal design of structures.
+<p>As someone coming from theoretical solid mechanics, I’m naturally drawn to optimization problems, as <strong>classical mechanics is
+the traditional field of application of optimization</strong>. As the laws of nature are governed by extremum principles, <strong>it is
+impossible to be well trained in any field of theoretical physics without having a firm understanding of optimization</strong>.
+Simply put, optimization is ‘business as usual’ for someone in computational solid mechanics, part of everyday life.</p>
+<p>Let me tell you an example. When we calculate the deflection of a beam, we are actually solving an optimization problem, and
+we use the principle of minimum potential energy to do so. We formulate the expression for the potential energy, and we
+calculate the value of the arguments that would minimize the expression. The supports defined on a structure are in fact
+constraints, and the problem becomes a nonlinear, constrained optimization problem. In general, what we do in solid mechanics
+is that we produce approximate solutions to partial differential equations (PDEs). We to that by constructing functions with
+lots of unknown parameters, establish an error measure, and we calculate the unknowns in a way so that the error of the
+approximation is minimal from all the possible options.</p>
+<p>But there is more.</p>
+<p>My field of study as a PhD student was Structural Topology Optimization, which is about figuring out
+what shape should a structure have in order to maximize it’s performance. It is about optimizing the
+mass distribution of a structure, subject to various constraints, to improve on the performance of it.
 This work required not only a solid understanding of solid mechanics but also a deep knowledge of optimization algorithms,
-both theoretical and practical. I have experience with gradient-based and gradient-free optimization algorithms, heuristic
-and path-following methods, and linear and nonlinear, as well as integer and real-valued optimization problems.</p>
-<p>During my PhD, I developed a custom optimization algorithm to solve the topology optimization problem, a highly nonlinear,
-mixed-integer optimization challenge with PDE constraints. This problem is beyond the capabilities of even advanced libraries
+both theoretical and practical. <strong>I have hands-on experience with gradient-based and gradient-free optimization algorithms, heuristic
+and path-following methods, linear and nonlinear, as well as integer and real-valued optimization problems.</strong> Most of these
+methods I’ve implemented myself.
+As a result of my work, I’ve developed a custom, domain-specific optimization algorithm to solve the topology optimization problem, a highly nonlinear,
+mixed-integer problem with PDE constraints. This problem is beyond the capabilities of even the most advanced libraries
 like Gurobi or CPLEX, necessitating a deep understanding of the problem and the ability to create a custom solution. My algorithm
 for finding optimal topologies required a thorough comprehension of the problem’s unique properties, allowing me to craft
-domain-specific solutions that leverage these characteristics. I believe that this specialized knowledge is far more valuable
-than simply knowing how to use existing libraries.</p>
+domain-specific solutions that leverage these characteristics. <strong>I think that this knowledge is far more valuable
+than simply knowing how to use existing libraries like Gurobi or CPLEX.</strong> What happens if the problem is out
+of reach for these libraries, like it was the case with my topology optimization problem? Then, you have to come up with
+a dedicated solution to the problem, like I did, and this is where the real fun begins, this is where fundamental
+understanding of the field is key.</p>
 <p>The algorithms I’ve implemented myself so far are:</p>
 <ul class="simple">
-<li><p>A graph theory-based optimization algorithm to minimize the bandwidth of the coefficient matrix in a finite element software.</p></li>
-<li><p>A genetic algorithm for general purpose nonlinear optimization.</p></li>
-<li><p>A solve for linear programming problems (LPP) of all kinds.</p></li>
-<li><p>A topology optimization algorithm using an Optimality Criteria Method (OC) using the SIMP approach for:</p>
+<li><p>A <strong>graph theory-based optimization algorithm</strong> to minimize the bandwidth of the coefficient matrix in a finite element software.</p></li>
+<li><p>A <strong>meta-heuristic binary genetic algorithm</strong> for general purpose nonlinear optimization.</p></li>
+<li><p>A <strong>solver for linear programming problems (LPP) of all kinds</strong>.</p></li>
+<li><p>A high performance <strong>topology optimization algorithm</strong> using an Optimality Criteria Method (OC) using the SIMP approach for:</p>
 <ul>
 <li><p>Finding the optimal topology of general structures for minimum volume, subject to an upper bound
 constraint on the work of external forces, a PDE constraint expressing the equilibrium,
@@ -400,12 +421,29 @@ and an upper bound constraint on the utilization of the structure.</p></li>
 <li><p>Finding the optimal topology of general structures for maximum stiffness, subject to an upper bound
 constraint on the volume, a PDE constraint expressing the equilibrium,
 and an upper bound constraint on the utilization of the structure.</p></li>
+<li><p><strong>Handling millions of design variables efficiently</strong>, and being applicable to general structural models
+(models including 1D, 2D, and 3D domains).</p></li>
 </ul>
 </li>
 <li><p>A shape optimization algorithm to optimize various kinds of curved-folded structures using the
 Finite Strip Method (FSM) for minimum weight, subject to an upper bound constraint on the volume,
 a PDE constraint expressing the equilibrium of the strucrure.</p></li>
 </ul>
+<p>For the first tree, you can find program code in my open-source library <cite>sigmaepsilon.math</cite>, introduced
+in this project:</p>
+<p><a class="reference internal" href="../projects/5_SigmaEpsilon.html#development-of-a-scientific-research-toolkit-in-python-including-a-finite-element-and-a-tensor-algebra-library"><span class="std std-ref">Development of a Scientific Research Toolkit in Python Including a Finite Element and a Tensor Algebra Library</span></a></p>
+<p>The most complex one of these is by far the topology optimization algorithm, which, trust me, is probably more challenging
+than any you might present to me. You can read more about it here:</p>
+<p><a class="reference internal" href="../projects/6_topopt.html#development-of-a-high-performance-topology-optimization-library-in-python"><span class="std std-ref">Development of a High Performance Topology Optimization Library in Python</span></a></p>
+<p>Let me end this section with a quote from the famous mathematician, Leonhard Euler:</p>
+<blockquote class="epigraph">
+<div><p>“Nothing takes place in the world whose meaning is not that of some maximum or minimum.”</p>
+<p>~ Leonhard Euler</p>
+</div></blockquote>
+<p>What this means is that every problem can be formulated as an optimization problem. I understand why Euler said this, and I
+actually solve a lot of problems by first transforming them into optimization problems. This is the way I think, this is the
+way I work, and this is the way I can help you. <strong>You tell me a problem, and I can formulate that problem
+as an optimization problem, and I can solve it.</strong></p>
 </section>
 
 
@@ -418,6 +456,24 @@ a PDE constraint expressing the equilibrium of the strucrure.</p></li>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="software_developer.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Me as a Software Developer</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="data_scientist.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Me as a Data Scientist</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               

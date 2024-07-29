@@ -14,3 +14,5 @@ I also have experience in academic research, as I was a PhD student for 4 years,
 open challenges of structural topology optimization. This work required a deep understanding of the theoretical 
 aspects of structural mechanics and applied mathematics, as well as the ability to develop a custom software 
 implementation.
+
+Finally, check out my academic publication history here: :ref:`Publications`.
