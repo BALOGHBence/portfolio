@@ -18,3 +18,4 @@ skills and expertise.
    projects/4_Catamaran
    projects/5_SigmaEpsilon
    projects/6_topopt
+   projects/7_TenderPlatform
