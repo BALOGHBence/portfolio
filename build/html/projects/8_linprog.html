@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Me as an Optimization Engineer &#8212; Portfolio 0.0.1 documentation</title>
+    <title>7. Development of a Software Solution for Linear Programming Problems in Python &#8212; Portfolio 0.0.1 documentation</title>
   
   
   
@@ -39,12 +39,12 @@
     <script src="../_static/documentation_options.js?v=d45e8c67"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'roles/optimization_engineer';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'projects/8_linprog';</script>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Me as a Data Scientist" href="data_scientist.html" />
-    <link rel="prev" title="Me as a Software Developer" href="software_developer.html" />
+    <link rel="next" title="Roles" href="../roles.html" />
+    <link rel="prev" title="6. Development of a REST API backend for a Business Analytics Platform in Python" href="7_TenderPlatform.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,14 +141,14 @@
 </li>
 
 
-<li class="nav-item ">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../projects.html">
     Projects
   </a>
 </li>
 
 
-<li class="nav-item current active">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../roles.html">
     Roles
   </a>
@@ -266,14 +266,14 @@ document.write(`
 </li>
 
 
-<li class="nav-item ">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../projects.html">
     Projects
   </a>
 </li>
 
 
-<li class="nav-item current active">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../roles.html">
     Roles
   </a>
@@ -359,9 +359,9 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../roles.html" class="nav-link">Roles</a></li>
+    <li class="breadcrumb-item"><a href="../projects.html" class="nav-link">Projects</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Me as an...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
 </nav>
 </div>
@@ -378,74 +378,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="me-as-an-optimization-engineer">
-<h1>Me as an Optimization Engineer<a class="headerlink" href="#me-as-an-optimization-engineer" title="Link to this heading">#</a></h1>
-<p>As someone coming from theoretical solid mechanics, I’m naturally drawn to optimization problems, as <strong>classical mechanics is
-the traditional field of application of optimization</strong>. As the laws of nature are governed by extremum principles, <strong>it is
-impossible to be well trained in any field of theoretical physics without having a firm understanding of optimization</strong>.
-Simply put, optimization is ‘business as usual’ for someone in computational solid mechanics, part of everyday life.</p>
-<p>Let me tell you an example. When we calculate the deflection of a beam, we are actually solving an optimization problem, and
-we use the principle of minimum potential energy to do so. We formulate the expression for the potential energy, and we
-calculate the value of the arguments that would minimize the expression. The supports defined on a structure are in fact
-constraints, and the problem becomes a nonlinear, constrained optimization problem. In general, what we do in solid mechanics
-is that we produce approximate solutions to partial differential equations (PDEs). We to that by constructing functions with
-lots of unknown parameters, establish an error measure, and we calculate the unknowns in a way so that the error of the
-approximation is minimal from all the possible options.</p>
-<p>But there is more.</p>
-<p>My field of study as a PhD student was Structural Topology Optimization, which is about figuring out
-what shape should a structure have in order to maximize it’s performance. It is about optimizing the
-mass distribution of a structure, subject to various constraints, to improve on the performance of it.
-This work required not only a solid understanding of solid mechanics but also a deep knowledge of optimization algorithms,
-both theoretical and practical. <strong>I have hands-on experience with gradient-based and gradient-free optimization algorithms, heuristic
-and path-following methods, linear and nonlinear, as well as integer and real-valued optimization problems.</strong> Most of these
-methods I’ve implemented myself.
-As a result of my work, I’ve developed a custom, domain-specific optimization algorithm to solve the topology optimization problem, a highly nonlinear,
-mixed-integer problem with PDE constraints. This problem is beyond the capabilities of even the most advanced libraries
-like Gurobi or CPLEX, necessitating a deep understanding of the problem and the ability to create a custom solution. My algorithm
-for finding optimal topologies required a thorough comprehension of the problem’s unique properties, allowing me to craft
-domain-specific solutions that leverage these characteristics. <strong>I think that this knowledge is far more valuable
-than simply knowing how to use existing libraries like Gurobi or CPLEX.</strong> What happens if the problem is out
-of reach for these libraries, like it was the case with my topology optimization problem? Then, you have to come up with
-a dedicated solution to the problem, like I did, and this is where the real fun begins, this is where fundamental
-understanding of the field is key.</p>
-<p>The algorithms I’ve implemented myself so far are:</p>
-<ul class="simple">
-<li><p>A <strong>graph theory-based optimization algorithm</strong> to minimize the bandwidth of the coefficient matrix in a finite element software.</p></li>
-<li><p>A <strong>meta-heuristic binary genetic algorithm</strong> for general purpose nonlinear optimization.</p></li>
-<li><p>A <strong>solver for linear programming problems (LPP) of all kinds</strong> including continuous and mixed-integer problems.</p></li>
-<li><p>A high performance <strong>topology optimization algorithm</strong> using an Optimality Criteria Method (OC) using the SIMP approach for:</p>
-<ul>
-<li><p>Finding the optimal topology of general structures for minimum volume, subject to an upper bound
-constraint on the work of external forces, a PDE constraint expressing the equilibrium,
-and an upper bound constraint on the utilization of the structure.</p></li>
-<li><p>Finding the optimal topology of general structures for maximum stiffness, subject to an upper bound
-constraint on the volume, a PDE constraint expressing the equilibrium,
-and an upper bound constraint on the utilization of the structure.</p></li>
-<li><p><strong>Handling millions of design variables efficiently</strong>, and being applicable to general structural models
-(models including 1D, 2D, and 3D domains).</p></li>
-</ul>
-</li>
-<li><p>A shape optimization algorithm to optimize various kinds of curved-folded structures using the
-Finite Strip Method (FSM) for minimum weight, subject to an upper bound constraint on the volume,
-a PDE constraint expressing the equilibrium of the strucrure.</p></li>
-</ul>
-<p>For the first tree, you can find program code in my open-source library <cite>sigmaepsilon.math</cite>, introduced
-in this project:</p>
-<p><a class="reference internal" href="../projects/5_SigmaEpsilon.html#development-of-a-scientific-research-toolkit-in-python-including-a-finite-element-and-a-tensor-algebra-library"><span class="std std-ref">Development of a Scientific Research Toolkit in Python Including a Finite Element and a Tensor Algebra Library</span></a></p>
-<p>To read about the solution for linear programming problems, you can visit this project:</p>
-<p><a class="reference internal" href="../projects/8_linprog.html#development-of-a-software-solution-for-linear-programming-problems-in-python"><span class="std std-ref">Development of a Software Solution for Linear Programming Problems in Python</span></a></p>
-<p>The most complex one of these is by far the topology optimization algorithm, which, trust me, is probably more challenging
-than any you might present to me. You can read more about it here:</p>
-<p><a class="reference internal" href="../projects/6_topopt.html#development-of-a-high-performance-topology-optimization-library-in-python"><span class="std std-ref">Development of a High Performance Topology Optimization Library in Python</span></a></p>
-<p>Let me end this section with a quote from the famous mathematician, Leonhard Euler:</p>
-<blockquote class="epigraph">
-<div><p>“Nothing takes place in the world whose meaning is not that of some maximum or minimum.”</p>
-<p>~ Leonhard Euler</p>
-</div></blockquote>
-<p>What this means is that every problem can be formulated as an optimization problem. I understand why Euler said this, and I
-actually solve a lot of problems by first transforming them into optimization problems. This is the way I think, this is the
-way I work, and this is the way I can help you. <strong>You tell me a problem, and I can formulate that problem
-as an optimization problem, and I can solve it.</strong></p>
+  <section id="development-of-a-software-solution-for-linear-programming-problems-in-python">
+<span id="id1"></span><h1><span class="section-number">7. </span>Development of a Software Solution for Linear Programming Problems in Python<a class="headerlink" href="#development-of-a-software-solution-for-linear-programming-problems-in-python" title="Link to this heading">#</a></h1>
+<section id="keywords">
+<h2><span class="section-number">7.1. </span>Keywords<a class="headerlink" href="#keywords" title="Link to this heading">#</a></h2>
+<p>Python, Optimization, Linear Programming, Software Development, Algorithm Development, Numerical Methods</p>
+</section>
+<section id="overview">
+<h2><span class="section-number">7.2. </span>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>I developed a software solution for solving linear programming problems in Python. It efficiently handles a
+variety of problem types, including both continuous and mixed-integer linear programming. What sets my
+solution apart from other available options is its ease of use without compromising performance. Users
+can define problems naturally, without needing to conform to the specific formats required by most solvers.
+The library provides a unified and straightforward interface for setting up and solving linear programming problems.</p>
+<p>Visit the <a class="reference external" href="https://sigmaepsilonmath.readthedocs.io/en/latest/user_guide/optimization.html">documentation</a>
+to see more details about the solution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sigmaepsilon.math.optimize</span> <span class="kn">import</span> <span class="n">LinearProgrammingProblem</span> <span class="k">as</span> <span class="n">LPP</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sy</span>
+
+<span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">x3</span><span class="p">,</span> <span class="n">x4</span> <span class="o">=</span> <span class="n">variables</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">symbols</span><span class="p">([</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span> <span class="s1">&#39;x2&#39;</span><span class="p">,</span> <span class="s1">&#39;x3&#39;</span><span class="p">,</span> <span class="s1">&#39;x4&#39;</span><span class="p">])</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="mi">9</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="n">x2</span> <span class="o">+</span> <span class="n">x4</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="n">variables</span><span class="p">)</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">Relation</span><span class="p">(</span><span class="n">x1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="n">x4</span> <span class="o">-</span> <span class="mi">4</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="n">variables</span><span class="p">)</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">Relation</span><span class="p">(</span><span class="n">x2</span> <span class="o">+</span> <span class="n">x3</span> <span class="o">-</span> <span class="n">x4</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="n">variables</span><span class="p">)</span>
+<span class="n">bounds</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">)]</span>
+<span class="n">lpp</span> <span class="o">=</span> <span class="n">LPP</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="p">[</span><span class="n">eq1</span><span class="p">,</span> <span class="n">eq2</span><span class="p">],</span> <span class="n">variables</span><span class="o">=</span><span class="n">variables</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">)</span>
+<span class="n">solution</span> <span class="o">=</span> <span class="n">lpp</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 
@@ -459,20 +419,20 @@ as an optimization problem, and I can solve it.</strong></p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="software_developer.html"
+       href="7_TenderPlatform.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Me as a Software Developer</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Development of a REST API backend for a Business Analytics Platform in Python</p>
       </div>
     </a>
     <a class="right-next"
-       href="data_scientist.html"
+       href="../roles.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Me as a Data Scientist</p>
+        <p class="prev-next-title">Roles</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -487,9 +447,22 @@ as an optimization problem, and I can solve it.</strong></p>
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords">7.1. Keywords</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">7.2. Overview</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/roles/optimization_engineer.rst.txt">
+    <a href="../_sources/projects/8_linprog.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

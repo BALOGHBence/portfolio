@@ -40,7 +40,7 @@ The algorithms I've implemented myself so far are:
 
 * A **meta-heuristic binary genetic algorithm** for general purpose nonlinear optimization.
 
-* A **solver for linear programming problems (LPP) of all kinds**.
+* A **solver for linear programming problems (LPP) of all kinds** including continuous and mixed-integer problems.
 
 * A high performance **topology optimization algorithm** using an Optimality Criteria Method (OC) using the SIMP approach for:
   
@@ -63,6 +63,10 @@ For the first tree, you can find program code in my open-source library `sigmaep
 in this project:
 
 :ref:`Development of a Scientific Research Toolkit in Python Including a Finite Element and a Tensor Algebra Library`
+
+To read about the solution for linear programming problems, you can visit this project:
+
+:ref:`Development of a Software Solution for Linear Programming Problems in Python`
 
 The most complex one of these is by far the topology optimization algorithm, which, trust me, is probably more challenging
 than any you might present to me. You can read more about it here:

@@ -19,3 +19,4 @@ skills and expertise.
    projects/5_SigmaEpsilon
    projects/6_topopt
    projects/7_TenderPlatform
+   projects/8_linprog
